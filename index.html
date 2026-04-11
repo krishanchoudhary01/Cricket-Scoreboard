@@ -725,7 +725,6 @@ function showTab(id, btn) {
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   if(btn) btn.classList.add('active');
 }
-
 function calcRR(runs,balls) { return balls ? ((runs/balls)*6).toFixed(2) : '0.00'; }
 
 function updateUI() {
@@ -754,7 +753,6 @@ function updateUI() {
     document.getElementById('targetDisplay').style.display='none';
     document.getElementById('targetBar').style.display='none';
   }
-
   if(inn.currentStriker){
     const s=inn.batters[inn.currentStriker];
     document.getElementById('strikerName').textContent=inn.currentStriker;
@@ -770,7 +768,6 @@ function updateUI() {
     document.getElementById('bowlerName').textContent=inn.currentBowler;
     document.getElementById('bowlerFigures').textContent=`${b.wickets}-${b.runs} (${b.overs}.${b.balls})`;
   }
-
   // Over balls
   const ob=document.getElementById('overBalls');
   ob.innerHTML='<span class="over-label">This Over:</span>';
@@ -831,7 +828,6 @@ function updateUI() {
     oh.appendChild(d);
   });
 }
-
 renderSetupPlayers();
 </script>
 </body>
